@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Variables Declaration */
+:root {
+  /* Colors */
+  --hue: 100;
+  /* HSL color mode */
+  /* --bg-color: ; */
+  /* --primary-color: hsl(var(--hue), 95%, 48%);
+  --white-color: #fff;
+  --light-color: hsl(var(--hue), 4%, 97%);
+  --dark-color: hsl(var(--hue), 0%, 0%);
+  --accent-color: hsl(165, 60%, 20%); */
+
+  /* Fonts */
+  /* --font-family: "Quicksand", sans-serif; */
+
+  /* font-size */
+  /* --fs-big: 3.5rem;
+  --fs-medium: 2.4rem;
+  --fs-small: 1.1rem;
+  --fs-paragraph-text: 1.4rem; */
+
+  /* font-weights */
+  /* --fw-bold: 700;
+  --fw-semi-bold: 600;
+  --fw-normal: 500;
+  --fw-light: 400; */
+
+  /* Shadows */
+  /* --box-shadow: ; */
+}
+
+/* Variable Declaration ends */
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red; */
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* html,
+body {
+  height: 100%;
+} */
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-family);
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+a,
+.link {
+  text-decoration: none;
+}
+
+/* a,
+.link:hover {
+  color: gray;
+} */
+
+ul {
+  list-style: none;
+}
+
+/* Reusable classes */
+
+/* .grid {
+  display: grid;
+  gap: var(--grid-gap, 1rem);
+}
+
+.flex {
+  display: flex;
+  gap: var(--flex-gap, 1rem);
+}
+
+.wrapper {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  max-height: 100%;
+}
+
+.accent {
+  color: var(--bg-color);
+}
+
+.container {
+  max-width: 80%;
+  margin-inline: auto;
+} */
+
+/* Paddings */
+/* .p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.pt-1 {
+  padding-top: 1rem;
+}
+
+.pt-2 {
+  padding-top: 2rem;
+}
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
+.pb-2 {
+  padding-bottom: 2rem;
+}
+
+.pl-l {
+  padding-left: 1rem;
+}
+.pl-2 {
+  padding-left: 2rem;
+}
+
+.pr-1 {
+  padding-right: 1rem;
+}
+
+.pr-2 {
+  padding-right: 2rem;
+} */
+
+/* Margins */
+/* .m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 2rem;
+}
+
+.mb-1 {
+  margin-bottom: 1re;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+.ml-1 {
+  margin-left: 1re;
+}
+
+.ml-2 {
+  margin-left: 2rem;
+}
+.mr-1 {
+  margin-right: 1re;
+}
+
+.mr-2 {
+  margin-right: 2rem;
+}
+
+.btn {
+  padding: 0.4rem 1rem;
+  display: inline-block;
+  border-radius: 8px;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-normal);
+}
+
+.bold {
+  font-weight: var(--fw-bold);
+}
+
+.p {
+  font-size: var(--fs-paragraph-text);
+  font-weight: var(--fw-normal);
+}
+
+.h1 {
+  font-size: var(--fs-big);
+  font-weight: var(--fw-bold);
+}
+
+.h2 {
+  font-size: var(--fs-medium);
+  font-weight: var(--fw-semi-bold);
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.green {
+  color: green;
+} */
+
+/* Colors */
+/* .bg-dark {
+  background-color: var(--dark-color);
+} */
+
+/* .bg-light{
+  background: ;
+} */
+/* 
+.card {
+  box-shadow: 5px 5px 10px rgb(49, 48, 48);
+  border-radius: 10px;
+} */
+
+/* Reusable classes ends */
+
+/* Header */
+
+/* .header {
+  font-size: var(--fs-medium);
+  color: var(--bg-color);
+  background-color: var(--white-color);
+  box-shadow: 5px 5px 10px rgb(46, 45, 42);
+}
+
+.header-container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  flex-direction: row;
+  font-size: var(--fs-paragraph-text);
+}
+
+.nav-link {
+  font-weight: var(--fw-semi-bold);
+  color: var(--bg-color);
+  transition: color 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+    background-color 0.8s;
+}
+
+.nav-list .nav-link:hover {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  font-weight: var(--fw-bold);
+} */
+
+/* User */
+
+/* .profile-image {
+  width: 170px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.profile-image img {
+  border-radius: 50%;
+} */
+
+/* REPO */
+/* .repo-container {
+  place-items: start;
+} */
+
+/* .repo-name {
+  font-weight: var(--fw-bold);
+} */
