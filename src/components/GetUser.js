@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import ErrorPage from "./ErrorPage";
 // import { Link } from "react-router-dom";
 import GetRepo from "./GetRepo";
 import Loading from "./Loading";
@@ -21,11 +22,12 @@ function GetUser({ loading, data, error, repos }) {
   if (loading) return <Loading />;
 
   if (!loading && error !== null) {
-    return <p>{error.message}</p>;
+    return <ErrorPage error={error.message} />;
   }
 
   return (
     <div className="container ">
+      <h1 className="h3">Github User Profile</h1>
       <div className="card p-5 m-2 grid">
         <p className="p">
           Hireable{" "}

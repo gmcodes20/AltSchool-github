@@ -6,7 +6,6 @@ function Profile() {
   return (
     <Fragment>
       <div className="container">
-        <h1 className="h3">Github User Profile</h1>
         <User />
       </div>
 

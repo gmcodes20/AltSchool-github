@@ -7,8 +7,8 @@ function Loading() {
         style={{ maxWidth: "80%" }}
         className="container text-center  mx-auto"
       >
-        <div class="spinner-border fs-3 text-success" role="status">
-          <span class="visually-hidden">Loading...</span>
+        <div className="spinner-border fs-3 text-success" role="status">
+          <span className="visually-hidden">Loading...</span>
         </div>
         <p className="text-danger">Loading...</p>
       </div>

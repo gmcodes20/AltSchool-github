@@ -3,6 +3,17 @@ import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Loading from "./Loading";
 
+let githubClientId;
+let githubClientSecret;
+
+if (process.env.NODE_ENV !== "production") {
+  githubClientId = process.env.REACT_APP_CLIENT_ID;
+  githubClientSecret = process.env.REACT_APP_CLIENT_SECRET;
+} else {
+  githubClientId = process.env.CLIENT_ID;
+  githubClientSecret = process.env.CLIENT_SECRET;
+}
+
 function Repo() {
   const [loading, setLoading] = useState(false);
   const [repo, setRepo] = useState({});
@@ -24,7 +35,7 @@ function Repo() {
 
       try {
         const res = await axios.get(
-          `${repoLink}?client_id=${process.env.REACT_APP_CLIENT_ID}&secret=${process.env.REACT_APP_CLIENT_SECRET}`
+          `${repoLink}?client_id=${githubClientId}&secret=${githubClientSecret}`
         );
         setRepo(res.data);
       } catch (error) {
@@ -35,12 +46,6 @@ function Repo() {
 
     getRepo();
   }, [repoLink]);
-
-  console.log(repo);
-
-  // if (repoLink == null) {
-  //   return <p> No Repository selected </p>;
-  // }
 
   if (loading) return <Loading />;
 
