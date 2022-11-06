@@ -35,8 +35,6 @@ function User() {
     fetchData();
   }, []);
 
-  console.log(data);
-
   return <GetUser loading={loading} data={data} error={error} />;
 }
 

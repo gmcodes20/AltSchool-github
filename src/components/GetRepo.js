@@ -20,7 +20,9 @@ function GetRepo({ url }) {
   //  Get Total Page Count
   const totalPageCount = Math.ceil(totalUsers / usersPerPage);
 
-  const updatePage = (e) => setCurrentPage(Number(e.target.innerHTML));
+  const updatePage = (e) => {
+    setCurrentPage(Number(e.target.innerHTML));
+  };
   const prev = () =>
     currentPage <= 1 ? setCurrentPage(1) : setCurrentPage(currentPage - 1);
 
@@ -47,7 +49,19 @@ function GetRepo({ url }) {
     getRepo();
   }, [url]);
 
-  console.log(repos);
+  useEffect(() => {
+    let list = document.querySelectorAll(".page-link");
+
+    list.forEach((item) => {
+      // const itemValue = item.innerHTML;
+      item.classList.remove("active");
+      if (item.innerHTML == currentPage) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+  });
 
   if (loading) return <Loading />;
 
@@ -55,7 +69,7 @@ function GetRepo({ url }) {
 
   return (
     <Fragment>
-      <div className="container card">
+      <div className="container shadow-sm card">
         <h3 className="p text-danger">Repositories</h3>
         <ol className="repo-list m-2">
           {currentPosts?.map((repo) => {
@@ -77,6 +91,7 @@ function GetRepo({ url }) {
           updatePage={updatePage}
           prev={prev}
           next={next}
+          currentPage={currentPage}
         />
       </div>
     </Fragment>

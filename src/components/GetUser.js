@@ -28,7 +28,7 @@ function GetUser({ loading, data, error, repos }) {
   return (
     <div className="container ">
       <h1 className="h3">Github User Profile</h1>
-      <div className="card p-5 m-2 grid">
+      <div className="card p-5 m-2 grid   shadow">
         <p className="p">
           Hireable{" "}
           <span>

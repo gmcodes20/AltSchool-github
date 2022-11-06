@@ -1,6 +1,6 @@
 import React from "react";
 
-function Pagination({ totalPageCount, updatePage, prev, next }) {
+function Pagination({ totalPageCount, updatePage, prev, next, currentPage }) {
   const btn = [];
   for (let i = 1; i <= totalPageCount; i++) {
     btn.push(i);
@@ -11,7 +11,11 @@ function Pagination({ totalPageCount, updatePage, prev, next }) {
       <ul className="pagination pagination-sm justify-content-center flex-wrap">
         <li className="page-item">
           {" "}
-          <button onClick={prev} className="page-link">
+          <button
+            disabled={currentPage <= 1}
+            onClick={prev}
+            className="page-link"
+          >
             Prev
           </button>
         </li>
