@@ -53,7 +53,6 @@ function GetRepo({ url }) {
     let list = document.querySelectorAll(".page-link");
 
     list.forEach((item) => {
-      // const itemValue = item.innerHTML;
       item.classList.remove("active");
       if (item.innerHTML == currentPage) {
         item.classList.add("active");
