@@ -23,10 +23,7 @@ function Header() {
               </NavLink>
             </li>
             <li>
-              <NavLink
-                className={"nav-link link-light p-1"}
-                to={"/errorboundry"}
-              >
+              <NavLink className={"nav-link link-light p-1"} to={"/testerror"}>
                 Test Error
               </NavLink>
             </li>

@@ -54,7 +54,7 @@ function GetRepo({ url }) {
 
     list.forEach((item) => {
       item.classList.remove("active");
-      if (item.innerHTML == currentPage) {
+      if (Number(item.innerHTML) === Number(currentPage)) {
         item.classList.add("active");
       } else {
         item.classList.remove("active");
