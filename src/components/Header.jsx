@@ -18,8 +18,8 @@ function Header() {
             </li>
 
             <li>
-              <NavLink className={"nav-link link-light p-1"} to={"/profile"}>
-                Profile
+              <NavLink className={"nav-link link-light p-1"} to={"/search"}>
+                Search Profiles
               </NavLink>
             </li>
             <li>

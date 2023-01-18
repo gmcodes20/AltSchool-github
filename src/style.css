@@ -126,6 +126,9 @@ ul {
   list-style: none;
 }
 
+.search-input:focus {
+  box-shadow: none !important;
+}
 /* Reusable classes */
 
 /* .grid {

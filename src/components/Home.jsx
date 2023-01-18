@@ -19,10 +19,10 @@ function Home() {
 
           <div className="d-flex  flex-column flex-md-row align-items-start gap-2">
             <button
-              onClick={() => navigate("profile")}
+              onClick={() => navigate("search")}
               className="btn btn-primary px-3 fs-6"
             >
-              Check Profile
+              Search
             </button>
             <button
               onClick={() => navigate("errorboundry")}

@@ -4,7 +4,7 @@ import ErrorPage from "./ErrorPage";
 import GetRepo from "./GetRepo";
 import Loading from "./Loading";
 
-function GetUser({ loading, data, error, repos }) {
+function GetUser({ loading, data, error, url }) {
   const {
     hireable,
     bio,
@@ -99,7 +99,7 @@ function GetUser({ loading, data, error, repos }) {
             </div>
           </div>
           <Fragment>
-            <GetRepo />
+            <GetRepo url={url} />
           </Fragment>
         </div>
       </div>

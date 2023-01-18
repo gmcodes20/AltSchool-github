@@ -37,7 +37,7 @@ function GetRepo({ url }) {
 
       try {
         const res = await axios.get(
-          `https://api.github.com/users/gmcodes20/repos?page=1&per_page=150&client_id=${process.env.REACT_APP_CLIENT_ID}&secret=${process.env.REACT_APP_CLIENT_SECRET}`
+          `https://api.github.com/users/${url}/repos?page=1&per_page=150&client_id=${process.env.REACT_APP_CLIENT_ID}&secret=${process.env.REACT_APP_CLIENT_SECRET}`
         );
         setRepos(res.data);
       } catch (error) {

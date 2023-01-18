@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import GetUser from "./GetUser";
+import { useLocation } from "react-router-dom";
 import axios from "axios";
 
 let githubClientId;
@@ -17,13 +18,15 @@ function User() {
   const [data, setData] = useState({});
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const location = useLocation();
+  const { username } = location.state;
 
   useEffect(() => {
     setLoading(true);
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `https://api.github.com/users/gmcodes20?client_id=${githubClientId}&secret=${githubClientSecret}`
+          `https://api.github.com/users/${username}?client_id=${githubClientId}&secret=${githubClientSecret}`
         );
         setData(res.data);
       } catch (error) {
@@ -33,9 +36,9 @@ function User() {
     };
 
     fetchData();
-  }, []);
+  }, [username]);
 
-  return <GetUser loading={loading} data={data} error={error} />;
+  return <GetUser loading={loading} data={data} error={error} url={username} />;
 }
 
 export default User;
